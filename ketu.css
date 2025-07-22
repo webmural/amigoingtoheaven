@@ -1,0 +1,49 @@
+/* https://s9a.page/tape */
+:root{--tape-filter:none;--tape-bluv:#11dff1;--tape-play:#fbbfff;--tape-loud:#eee833;--tape-luvu:#44f477;--tape-blaq:#0e0e0e;--tape-watt:#e0e0e0;--tape-hex:#e0e0e0;--tape-mix:transparent}.tape-watt{--tape-hex:var(--tape-watt)}.tape-luvu{--tape-hex:var(--tape-luvu)}.tape-loud{--tape-hex:var(--tape-loud)}.tape-play{--tape-hex:var(--tape-play)}.tape-bluv{--tape-hex:var(--tape-bluv)}.tape-flat{border-color:transparent}.tape-flap{border-color:currentColor}.tape-flow{--tape-remix:none}.tape-flow :not(.tape-skip){background-color:transparent;color:inherit}.tape-blaq,.tape-bluv,.tape-loud,.tape-luvu,.tape-play,.tape-watt{--tape-mix:var(--tape-hex);--tape-remix:none;color:var(--tape-blaq)!important;background-color:var(--tape-mix)!important;background-image:var(--tape-remix);filter:var(--tape-filter)}.tape-blaq{--tape-mix:var(--tape-blaq);color:var(--tape-hex)!important}.tape-erase,.tape-erase *{color:transparent!important}
+
+/* /\/\/\/ */
+
+:root {
+  --tape-watt: rgb(161, 153, 250);
+  --tape-play: rgb(200, 160, 222);
+  --tape-loud: rgb(181, 146, 250);
+  --tape-luvu: rgb(170, 150, 250);
+  --tape-bluv: rgb(131, 161, 251);
+}
+
+::selection {
+  background: darkorchid;
+  color: #ec9;
+}
+
+@media (prefers-contrast: more) {
+  :root { --tape-blaq: #070707 }
+  ::selection { background: purple }
+}
+
+samp {
+  text-shadow:
+    1vw -1vh 0 var(--tape-play),
+    -1vw -1vh 0 var(--tape-loud),
+    -1vw -1vh 0 var(--tape-luvu),
+    -1vw 1vh 0 var(--tape-bluv);
+}
+
+q::before,
+q::after {
+  color: purple;
+}
+
+.blur {
+  text-shadow:
+    -108pc 8vh 0 blueviolet,
+    -108pc 8vh 0 darkviolet;
+}
+
+:focus {
+  --tape-filter: hue-rotate(80deg);
+}
+
+:any-link:hover {
+  --tape-filter: hue-rotate(40deg);
+}
